@@ -39,20 +39,20 @@ NSString * const TipPercentageIndexKey = @"TipPercentageIndex";
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    int index = [SettingsViewController defaultTipPercentageIndex];
+    NSInteger index = [SettingsViewController defaultTipPercentageIndex];
     [self.settingsTipControl setSelectedSegmentIndex:index];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    int index = self.settingsTipControl.selectedSegmentIndex;
+    NSInteger index = self.settingsTipControl.selectedSegmentIndex;
     [SettingsViewController setDefaultTipPercentageIndex:index];
 }
 
-+ (int)defaultTipPercentageIndex {
++ (NSInteger)defaultTipPercentageIndex {
     return [[NSUserDefaults standardUserDefaults] integerForKey:TipPercentageIndexKey];
 }
 
-+ (void)setDefaultTipPercentageIndex:(int)index {
++ (void)setDefaultTipPercentageIndex:(NSInteger)index {
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     [defaults setInteger:index forKey:TipPercentageIndexKey];
     [defaults synchronize];

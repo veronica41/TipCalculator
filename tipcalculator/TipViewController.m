@@ -38,7 +38,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    int index = [SettingsViewController defaultTipPercentageIndex];
+    NSInteger index = [SettingsViewController defaultTipPercentageIndex];
     [self.tipControl setSelectedSegmentIndex:index];
     [self updateValues];
 }

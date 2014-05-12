@@ -12,7 +12,7 @@ extern NSString * const TipPercentageIndexKey;
 
 @interface SettingsViewController : UIViewController
 
-+ (int)defaultTipPercentageIndex;
-+ (void)setDefaultTipPercentageIndex:(int)index;
++ (NSInteger)defaultTipPercentageIndex;
++ (void)setDefaultTipPercentageIndex:(NSInteger)index;
 
 @end
